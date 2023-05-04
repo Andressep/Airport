@@ -6,12 +6,16 @@ public class Airport {
     private List<Airplane> airplanes = new ArrayList();
 
     // 1. Constructor con 100 aviones con datos aleatorios.
-    public Airport() {
+    public Airport(String name) {
         this.name = name;
         this.airplanes = airplanes;
         for (int i= 0; i < 100; i++) {
             airplanes.add(new Airplane());
         }
+    }
+
+    public String getName() {
+        return name;
     }
 
     public List<Airplane> getPlanes() {
@@ -41,6 +45,13 @@ public class Airport {
             seats += (airplane.getCapacity() - airplane.getPassengersOnBoard());
         }
         System.out.println("Seats Available In Total: " + seats);
+    }
+    public void getAirplaneById(int id) {
+        for (Airplane airplanes : getPlanes()) {
+            if (airplanes.getId() == id) {
+                System.out.println(airplanes);
+            }
+        }
     }
 
 

@@ -1,28 +1,28 @@
 import java.util.Random;
-import java.util.UUID;
 
 public class Airplane {
-    private UUID id;
+    private int id;
     private int capacity;
     private int passengersOnBoard;
     private boolean state;
     private static int lastId = 0;
+    /*
     public Airplane(UUID id, int capacity, int passengersOnBoard, boolean state) {
         this.id = id;
         this.capacity = capacity;
         this.passengersOnBoard = passengersOnBoard;
         this.state = state;
     }
-    /*
+    */
     public Airplane() {
         Random random = new Random();
         this.id = lastId + 1; // Arroja valores entre 1 - 100.
         this.capacity = random.nextInt(101) + 100; // Arroja valores entre 100 - 200.
-        this.occupiedSeats = random.nextInt(this.capacity + 1); // Arrojara valores entre 1 - capacity.
+        this.passengersOnBoard = random.nextInt(this.capacity + 1); // Arrojara valores entre 1 - capacity.
         this.state = random.nextBoolean(); // Arroja true o false aleatoriamente.
         lastId = id;
     }
-    */
+    /*
     public Airplane() {
         Random random = new Random();
         this.id = UUID.randomUUID(); // Arroja valores entre 1 - 100.
@@ -30,8 +30,8 @@ public class Airplane {
         this.passengersOnBoard = random.nextInt(this.capacity + 1); // Arrojara valores entre 1 - capacity.
         this.state = random.nextBoolean(); // Arroja true o false aleatoriamente.
     }
-
-    public UUID getId() {
+    */
+    public int getId() {
         return id;
     }
 
