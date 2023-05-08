@@ -81,20 +81,20 @@ public class Aeropuerto {
     }
     // 2. Metodo que muestra la cantidad de pasajeros en los 100 aviones;
     public void mostrarPasajerosTotales() {
-        int passengers = 0;
+        int pasajeros = 0;
         for (Avion avion : getAviones()) {
-            passengers += avion.getPasajerosActuales();
+            pasajeros += avion.getPasajerosActuales();
         }
-        System.out.println("Total Passengers: " + passengers);
+        System.out.println("Total de pasajeros: " + pasajeros);
     }
 
     // 3. Metodo que muestra la cantidad de asientos disponibles en los 100 aviones.
     public void mostrarAsientosDisponibles() {
-        int seats = 0;
+        int asientos = 0;
         for (Avion avion : getAviones()) {
-            seats += (avion.getCantidadMaxima() - avion.getPasajerosActuales());
+            asientos += (avion.getCantidadMaxima() - avion.getPasajerosActuales());
         }
-        System.out.println("Seats Available In Total: " + seats);
+        System.out.println("Asientos totales disponibles: " + asientos);
     }
     public void mostrarAvionPorID() {
         Scanner scanner = new Scanner(System.in);
